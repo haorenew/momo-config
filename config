@@ -58,6 +58,13 @@
         "server": "8.8.8.8",
         "path": "/dns-query",
         "detour": "📺 流媒体"
+      },
+      {
+        "tag": "foreign-games",
+        "type": "https",
+        "server": "8.8.8.8",
+        "path": "/dns-query",
+        "detour": "🎮 Global Games"
       }
     ],
     "rules": [
@@ -133,8 +140,6 @@
           "update.microsoft.com",
           "windowsupdate.com",
           "xboxlive.cn",
-          "xboxlive.com",
-          "xbox.com",
           "dlassets.xboxlive.com",
           "assets1.xboxlive.com",
           "assets2.xboxlive.com",
@@ -168,23 +173,6 @@
           "geosite-apple-cn"
         ],
         "server": "local"
-      },
-      {
-        "domain_suffix": [
-          "github.com",
-          "api.github.com",
-          "githubusercontent.com",
-          "raw.githubusercontent.com",
-          "objects.githubusercontent.com",
-          "githubassets.com",
-          "github.io",
-          "ghcr.io"
-        ],
-        "server": "foreign-github"
-      },
-      {
-        "rule_set": "geosite-github",
-        "server": "foreign-github"
       },
       {
         "domain_suffix": [
@@ -224,6 +212,23 @@
       {
         "rule_set": "geosite-ai",
         "server": "foreign-ai"
+      },
+      {
+        "domain_suffix": [
+          "github.com",
+          "api.github.com",
+          "githubusercontent.com",
+          "raw.githubusercontent.com",
+          "objects.githubusercontent.com",
+          "githubassets.com",
+          "github.io",
+          "ghcr.io"
+        ],
+        "server": "foreign-github"
+      },
+      {
+        "rule_set": "geosite-github",
+        "server": "foreign-github"
       },
       {
         "domain_suffix": [
@@ -294,7 +299,19 @@
           "geosite-blizzard",
           "geosite-ea",
           "geosite-ubisoft",
-          "geosite-xbox",
+          "geosite-xbox"
+        ],
+        "server": "foreign-games"
+      },
+      {
+        "domain_suffix": [
+          "xboxlive.com",
+          "xbox.com"
+        ],
+        "server": "foreign-games"
+      },
+      {
+        "rule_set": [
           "geosite-geolocation-cn",
           "geosite-cn"
         ],
@@ -401,7 +418,8 @@
         "🎯 全球直连",
         "🐸 手动选择"
       ],
-      "interrupt_exist_connections": false
+      "interrupt_exist_connections": false,
+      "default": "🐸 手动选择"
     },
     {
       "tag": "🎯 全球直连",
@@ -568,23 +586,6 @@
       },
       {
         "domain_suffix": [
-          "github.com",
-          "api.github.com",
-          "githubusercontent.com",
-          "raw.githubusercontent.com",
-          "objects.githubusercontent.com",
-          "githubassets.com",
-          "github.io",
-          "ghcr.io"
-        ],
-        "outbound": "👨‍💻 Github"
-      },
-      {
-        "rule_set": "geosite-github",
-        "outbound": "👨‍💻 Github"
-      },
-      {
-        "domain_suffix": [
           "anthropic.com",
           "api.anthropic.com",
           "console.anthropic.com",
@@ -621,6 +622,23 @@
       {
         "rule_set": "geosite-ai",
         "outbound": "🧠 AI"
+      },
+      {
+        "domain_suffix": [
+          "github.com",
+          "api.github.com",
+          "githubusercontent.com",
+          "raw.githubusercontent.com",
+          "objects.githubusercontent.com",
+          "githubassets.com",
+          "github.io",
+          "ghcr.io"
+        ],
+        "outbound": "👨‍💻 Github"
+      },
+      {
+        "rule_set": "geosite-github",
+        "outbound": "👨‍💻 Github"
       },
       {
         "domain_suffix": [
