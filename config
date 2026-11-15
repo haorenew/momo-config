@@ -293,13 +293,16 @@
         "server": "foreign-media"
       },
       {
+        "rule_set": "geosite-xbox",
+        "server": "local"
+      },
+      {
         "rule_set": [
           "geosite-steam",
           "geosite-epicgames",
           "geosite-blizzard",
           "geosite-ea",
-          "geosite-ubisoft",
-          "geosite-xbox"
+          "geosite-ubisoft"
         ],
         "server": "foreign-games"
       },
@@ -308,7 +311,7 @@
           "xboxlive.com",
           "xbox.com"
         ],
-        "server": "foreign-games"
+        "server": "local"
       },
       {
         "rule_set": [
@@ -482,6 +485,16 @@
         "outbound": "🎯 全球直连"
       },
       {
+        "source_ip_cidr": [
+          "192.168.2.14/32"
+        ],
+        "network": "udp",
+        "port": [
+          3544
+        ],
+        "outbound": "🎯 全球直连"
+      },
+      {
         "network": "udp",
         "port": [
           123
@@ -563,13 +576,16 @@
         "outbound": "🎯 全球直连"
       },
       {
+        "rule_set": "geosite-xbox",
+        "outbound": "🎯 全球直连"
+      },
+      {
         "rule_set": [
           "geosite-steam",
           "geosite-epicgames",
           "geosite-blizzard",
           "geosite-ea",
-          "geosite-ubisoft",
-          "geosite-xbox"
+          "geosite-ubisoft"
         ],
         "outbound": "🎮 Global Games"
       },
@@ -578,7 +594,7 @@
           "xboxlive.com",
           "xbox.com"
         ],
-        "outbound": "🎮 Global Games"
+        "outbound": "🎯 全球直连"
       },
       {
         "protocol": "quic",
